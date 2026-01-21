@@ -13,7 +13,7 @@ export class Users {
 
   async createNewUser(body: CreateUserDto) {
     const response = await this.requestContext.post(
-      `${process.env.BASE_URL}${process.env.USERS_API_URL}`,
+      `https://serverest.dev/usuarios`,
       { data: body },
     );
     this.httpLogger.logApiRequest(response, body);
